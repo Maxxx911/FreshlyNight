@@ -1,0 +1,43 @@
+<main role="main" class="inner cover">
+  <style>
+   li {
+    list-style-type: none; /* Убираем маркеры */
+   },
+   .hidden_input{
+      display: none
+   },
+   .padding-button{
+     margin-right: '50px'
+   }
+  </style>
+  <h1 class="cover-heading"><%=@dish.title %> <%= @dishes_rating[@dish.id]%></h1>
+  <ul>
+    <%@dish.components.each do |component| %>
+      <li><%= component.title%></li>
+    <%end%>
+  </ul>
+  <div class='row'>
+    <div class='md-3'>
+      <%= form_for(@vote) do |v| %>
+        <%= v.hidden_field(:status, :value => 'dislike')%>
+        <%= v.hidden_field( :dish_id)%>
+        <%= v.submit('Dislike')%>
+      <%end%>
+    </div>
+    <div class='md-3'></div>
+    <div class='md-3'>
+      <%= form_for(@vote) do |v| %>
+        <%= v.hidden_field(:status, :value => 'like')%>
+        <%= v.hidden_field( :dish_id)%>
+        <%= v.submit('Like')%>
+      <%end%>
+    </div>
+  </div>
+</main>
+
+<footer class="mastfoot mt-auto">
+  <div class="inner">
+    <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  </div>
+</footer>
+    
