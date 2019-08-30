@@ -6,5 +6,9 @@ class DishesController < ApplicationController
 
     @dish = current_user&.prefered_dish
     @vote = current_user&.votes.new(dish: @dish)
+
+    @dish_all = Dish.all
+    @product_all = Product.all
+    @components_all = Component.all
   end
 end
