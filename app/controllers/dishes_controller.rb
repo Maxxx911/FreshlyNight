@@ -6,5 +6,15 @@ class DishesController < ApplicationController
 
     @dish = current_user&.prefered_dish
     @vote = current_user&.votes.new(dish: @dish)
+    @dishes = Dish.order(:id).page(params[:page])
+  end
+
+  def show
+    @dish = Dish.find(params[:id])
+    byebug
+  end
+
+  def edit
+    byebug
   end
 end
