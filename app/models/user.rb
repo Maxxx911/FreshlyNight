@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :like_dishes
   has_many :dislike_dishes
 
+  has_many :calory_users
+  has_many :calories, through: :calory_users
 
   def products_rating
     @products_rating ||= Product.all.inject({}) do |rating, product|

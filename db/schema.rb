@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_200501) do
+ActiveRecord::Schema.define(version: 2020_05_17_114715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2020_05_11_200501) do
     t.integer "fat_value", default: 0, null: false
     t.integer "total_calories", default: 0, null: false
     t.index ["dish_id"], name: "index_calories_on_dish_id"
+  end
+
+  create_table "calory_users", force: :cascade do |t|
+    t.bigint "calory_id"
+    t.bigint "user_id"
+    t.integer "standart", default: 2000, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["calory_id"], name: "index_calory_users_on_calory_id"
+    t.index ["user_id"], name: "index_calory_users_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
