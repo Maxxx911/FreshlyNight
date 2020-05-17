@@ -17,11 +17,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'simple_form'
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'bootstrap', '~> 4.3.1'
 
 gem "chartkick"
 gem 'kaminari'
-gem 'material_design_lite-sass'
 
 group :development, :test do
   gem 'ffaker'

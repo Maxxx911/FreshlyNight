@@ -13,5 +13,115 @@
 
 
  */
- @import "material";
+ @import "bootstrap";
 
+.navbar-dark {
+  background-color: #ffffff;
+}
+
+.black-link {
+  color: black !important;
+}
+
+.navbar-brand {
+  height: 73px;
+  width: 109px;
+}
+
+.main-layout {
+  background-color: #f2f2f2;
+}
+
+.border-grey {
+  border-bottom: grey 1px inset;
+}
+
+.font-header {
+  font: 50px/50px Roboto,sans-serif;
+  font-weight: 900;
+  max-width: 800px;
+  margin: 0 auto 35px;
+  word-wrap: break-word;
+}
+
+.navbar-white {
+  background-color: white;
+}
+
+.special-font {
+  font-family: Monospace;
+  color: #030;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .12rem;
+  background-color: transparent;
+  font-size: 1.2rem;
+  
+  &-large{
+    @extend .special-font;
+    font-size: 4.2rem;
+  }
+}
+
+.backgroound-main {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  width: 100.8%;
+  height: 850px;
+	font-size: 18px;
+	background-image: image-url('menu_image_tomato.webp');
+}
+
+.dash {
+  max-width: 50px;
+  border-top: 3px solid #35bb77;
+}
+
+.img-wrap {
+  flex: 1.7 1 0px;
+  overflow: hidden;
+}
+
+.on-the-menu-content {
+  margin-top: 4rem !important;
+  min-width: 60%;
+}
+
+.plan-card {
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.accessible-cta-color{
+  font-weight: 500;
+  color: #fff;
+  background-color: #07872b;
+  border-color: #07872b;
+}
+
+.footer-block {
+  background-color: #f8f7f4;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6!important;
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: rgb(222, 226, 230) !important;
+}
+
+.footer-container {
+  max-width: 900px;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-link {
+  font-weight: 500px;
+  color: gray;
+  font-family: Robotic;
+}

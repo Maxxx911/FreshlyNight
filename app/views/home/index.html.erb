@@ -1,0 +1,48 @@
+<br>
+<div class="row backgroound-main" style="margin-top: 10px">
+  <div class="on-the-menu-content col-12 col-md-11 col-lg-9 col-xl-6 align-self-center m-auto bg-white px-3 pt-4 pt-md-5 pb-5">
+    <div class="col-12 col-md-11 m-auto">
+      <h1 class="font-weight-bold text-dark font-roboto pr-5">Dishes on day</h1>
+      <p class="font-weight-normal text-dark font-roboto">Each dish in this collection has been selected among users. And is ready to bring joy to the preparation and use of the whole family.</p>
+      <div class="dash mb-4 mb-sm-5"></div>
+      <div class="row no-gutters justify-content-center">
+        <div class="meal-items-container col-12 col-md-11 col-lg-10">
+          <ul class="meal-items row list-unstyled pb-4 mb-0">
+            <% @dishes_of_day.each do |dish|  %>
+              <li class="col-md-4 d-md-flex flex-column align-items-center mb-md-3">
+                <div class="card d-flex" >
+                  <img class="card-img-top" src="https://res.cloudinary.com/freshly/image/upload/c_fill,dpr_2,f_auto,h_120,w_120/v1575470007/production-meal-without-background-image-4a81f49f-1780-48c9-b9e7-be1c9be51bd8.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row pt-6 pb-2 justify-content-center text-center mx-0">
+  <h1 class="col-12 font-weight-bold text-dark special-font-large pb-2">Menus that work for you</h1>
+  <p class="col-10 col-md-8 col-xl-6 font-weight-bold  text-dark px-0" >Select the special menus and you will get recipes for a whole week.</p>
+  <div class="plan-cards-wide col-12 mb-4 mt-3 d-none d-lg-block">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-7 col-xl-10">
+        <div class="row">
+          <% @menus.each do |menu| %>
+            <div class="col-lg-6 col-xl-3 my-3 px-3 text-center">
+              <div class="plan-card bg-white col-lg-12 m-auto pt-6 pb-3 special-font">
+                <h3 class="text-dark mb-4">Title</h3>
+                <p class="text-dark font-weight-normal">About this menu</p>
+                <button type="button" class="btn btn-block btn-primary btn-lg col-lg-11 m-auto accessible-cta-color">CHOOSE</button>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
